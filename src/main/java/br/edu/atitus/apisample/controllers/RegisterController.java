@@ -50,7 +50,7 @@ public class RegisterController {
 		service.save(newRegister);
 		//retornar a entidade salva
 		return ResponseEntity.status(HttpStatus.CREATED).body(newRegister);
-	}	
+	}	  
 	
 	@GetMapping
 	public ResponseEntity<List<RegisterEntity>> getRegisters() throws Exception {
@@ -59,7 +59,7 @@ public class RegisterController {
 		return ResponseEntity.ok(registers);
 	}
 	
-	@GetMapping("/{id}")
+	@GetMapping("/{id}")  
 	public ResponseEntity<RegisterEntity> getOneRegister(@PathVariable UUID id) throws Exception {
 		var registers = service.findByid(id);
 		return ResponseEntity.ok(registers);
