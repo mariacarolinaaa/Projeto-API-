@@ -52,6 +52,7 @@ public class RegisterController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(newRegister);
 	}
 	
+	
 	@GetMapping
 	public ResponseEntity<List<RegisterEntity>> getRegisters() throws Exception {
 		var registers = service.findAll();
