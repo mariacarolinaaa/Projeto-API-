@@ -50,8 +50,7 @@ public class RegisterController {
 		service.save(newRegister);
 		//retornar a entidade salva
 		return ResponseEntity.status(HttpStatus.CREATED).body(newRegister);
-	}
-	
+	}	
 	
 	@GetMapping
 	public ResponseEntity<List<RegisterEntity>> getRegisters() throws Exception {
